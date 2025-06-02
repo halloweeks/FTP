@@ -27,6 +27,29 @@ const char *base_name(const char *path) {
     return last_slash != NULL ? last_slash + 1 : path;
 }
 
+/*
+typedef struct {
+	uint16_t packet_id;
+	uint16_t version;
+} __attribute__ ((packed)) packet_header_t;
+
+typedef enum {
+	REQ_UPLOAD_FILE      = 0x0001,
+	REQ_DOWNLOAD_FILE    = 0x0002,
+	REQ_DELETE_FILE      = 0x0003,
+	REQ_RENAME_FILE      = 0x0004,
+	REQ_CHECKSUM_FILE    = 0x0005,
+} req_packet_t;
+
+typedef enum {
+	RES_UPLOAD_FILE      = 0x8001, // 0x8000 = 32768
+	RES_DOWNLOAD_FILE    = 0x8002,
+	RES_DELETE_FILE      = 0x8003,
+	RES_RENAME_FILE      = 0x8004,
+	RES_CHECKSUM_FILE    = 0x8005,
+} res_packet_t;
+*/
+
 typedef struct {
 	uint16_t packet_id;
 	uint16_t version;
