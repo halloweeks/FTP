@@ -48,6 +48,15 @@ typedef enum {
 	RES_RENAME_FILE      = 0x8004,
 	RES_CHECKSUM_FILE    = 0x8005,
 } res_packet_t;
+
+char email[] = "test@example.com";
+char pass[] = "1234";
+
+result_t res = api_login_v1(email, pass);
+
+if (res.status_code == LOGIN_SUCCESS) {
+
+}
 */
 
 typedef struct {
